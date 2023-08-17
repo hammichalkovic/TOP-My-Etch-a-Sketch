@@ -24,7 +24,6 @@ main {
 }
 
 .hovering {
-    background: linear-gradient(to right, hsl(0, 90%, 46%), hsl(49, 89%, 45%), hsl(128, 90%, 46%),
-    hsl(170, 90%, 46%), hsl(241, 90%, 46%), hsl(315, 90%, 46%));
-    transition: 4s linear;
+    background: url('../images/circle.jpg');
+    background-size: 100%;
 }
