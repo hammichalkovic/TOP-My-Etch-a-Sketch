@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    border: 1px solid black;
+    height: 1000px;
+    width: 1000px;
+}
+
+div {
+    border: 1px solid black;
+    height: 60px;
+    width: 60px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hovering {
+    background: linear-gradient(to right, hsl(0, 90%, 46%), hsl(49, 89%, 45%), hsl(128, 90%, 46%),
+    hsl(170, 90%, 46%), hsl(241, 90%, 46%), hsl(315, 90%, 46%));
+    transition: 4s linear;
+}
