@@ -2,12 +2,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 main {
     border: 1px solid black;
         /* height: 960px;
         width: 960px; */
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    margin: 30px;
 }
 
 div {
@@ -24,4 +31,8 @@ main {
 .hovering {
     background: url('../images/circle.jpg');
     background-size: 100%;
+}
+
+.button2 {
+    margin-top: 0;
 }
