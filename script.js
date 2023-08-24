@@ -8,7 +8,10 @@ let body = document.querySelector('body'),
     mainWidth = main.style.width = mainHight,
     mainHeightDigit = '',
     mainWidthDigit = '',
-    divsNumber = 0;
+    divsNumber = 0,
+    colorNumber1 = 0,
+    colorNumber2 = 0,
+    colorNumber3 = 0;
     // divHeight = div.style.height;
     // divWidth = div.style.width;
 
@@ -41,7 +44,14 @@ button.addEventListener('click', () => {
 });
 
 
+function toChangeHoverColor(item) {
 
+        colorNumber1 = Math.floor(Math.random() * 300) + 1;
+        colorNumber2 = Math.floor(Math.random() * 100) + 1;
+        colorNumber3 = Math.floor(Math.random() * 100) + 1;
+
+        item.style.backgroundColor = `hsl(${colorNumber1}, ${colorNumber2}%, ${colorNumber3}%)`;
+};
 
 
 function toSetField(sideLength) {
@@ -69,10 +79,11 @@ for (let i = 0; i < divsNumber; i++) {
 let divs = document.querySelectorAll('div');
 
 divs.forEach((item) => {
-   
-    item.addEventListener('mouseover', () => {
-        item.classList.add('hovering');
+    item.addEventListener('mouseover', (e) => {  
+        toChangeHoverColor(item);
     });
+
+    
 });
 
 };

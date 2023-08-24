@@ -43,11 +43,6 @@ main {
     justify-content: center;
 }
 
-.hovering {
-    background: linear-gradient(to bottom, hsl(172, 98%, 55%), hsl(123, 95%, 48%), hsl(303, 93%, 50%), hsl(56, 96%, 50%));
-    background-size: 100%;
-}
-
 .button2 {
     margin-top: 0;
 }
