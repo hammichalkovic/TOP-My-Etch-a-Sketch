@@ -11,7 +11,10 @@ let body = document.querySelector('body'),
     divsNumber = 0,
     colorNumber1 = 0,
     colorNumber2 = 0,
-    colorNumber3 = 0;
+    colorNumber3 = 0,
+    transparencyMin = 0.1,
+    transparencyDecreasingRate = 0.1,
+    clicks = 0;
     // divHeight = div.style.height;
     // divWidth = div.style.width;
 
@@ -50,7 +53,7 @@ function toChangeHoverColor(item) {
         colorNumber2 = Math.floor(Math.random() * 100) + 1;
         colorNumber3 = Math.floor(Math.random() * 100) + 1;
 
-        item.style.backgroundColor = `hsl(${colorNumber1}, ${colorNumber2}%, ${colorNumber3}%)`;
+        item.style.backgroundColor = `hsla(${colorNumber1}, ${colorNumber2}%, ${colorNumber3}%, ${transparencyDecreasingRate+= 0.1})`;
 };
 
 
@@ -73,16 +76,16 @@ for (let i = 0; i < divsNumber; i++) {
     div.style.height = mainHeightDigit / sideLength - 2.5 + 'px';
     div.style.width = mainWidthDigit / sideLength - 2.5  + 'px';
     main.appendChild(div);
-    
 }; 
 
 let divs = document.querySelectorAll('div');
 
 divs.forEach((item) => {
+    click = 0; 
     item.addEventListener('mouseover', (e) => {  
-        toChangeHoverColor(item);
+        toChangeHoverColor(item);        
     });
-
+    
     
 });
 
